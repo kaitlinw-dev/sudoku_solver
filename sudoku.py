@@ -113,6 +113,7 @@ class Board:
                             self.board[i,j] = n
                             if self.dfs():
                                 return True
+                            self.board[i,j]=0
                             self.visited.append((r,c))
                             self.stack.pop()
                             self.stack.append(next)
@@ -213,4 +214,4 @@ problem6 = {(0,1):7,(0,8):5,(1,1):2,(1,2):9,(1,4):8,
             (6,4):3,(7,0):2,(7,8):1,(8,0):6,(8,7):4}
 
 b = Board()
-b.solve_board(problem3)
+b.solve_board(problem5)
